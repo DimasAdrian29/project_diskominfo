@@ -133,7 +133,7 @@
 </head>
 <body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex">
 <!-- ==================== SIDEBAR COMPONENT ==================== -->
-@include('admin.partials.sidebar')
+@include('admin.persandian.partials.sidebar')
 
 <!-- ==================== MAIN CONTENT WRAPPER ==================== -->
 <div class="flex-1 flex flex-col ml-64 min-w-0 bg-background overflow-y-auto h-screen relative">

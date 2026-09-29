@@ -134,7 +134,7 @@
 </head>
 <body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex">
 <!-- ==================== SIDEBAR COMPONENT ==================== -->
-@include('admin.partials.sidebar')
+@include('admin.aptika.partials.sidebar')
 
 <!-- ==================== MAIN CONTENT WRAPPER ==================== -->
 <div class="flex-1 flex flex-col ml-64 min-w-0 bg-background">
@@ -169,7 +169,7 @@
 </div>
 </div>
 <!-- SECTION 2: MODERN HORIZONTAL TABS MENU -->
-<div class="border-b border-outline-variant/40 flex items-center gap-8">
+      <div class="border-b border-outline-variant/40 flex items-center gap-8 hidden">
 <!-- Tab 1: Data Instansi (ACTIVE) -->
 <button class="group relative pb-3.5 pt-1 flex items-center gap-2.5 text-label-lg font-label-lg font-bold text-primary border-b-2 border-primary transition-all" id="tab-btn-instansi" onclick="switchTab('instansi')">
 <span class="material-symbols-outlined text-xl text-primary">account_balance</span>
@@ -194,43 +194,53 @@
 <div class="space-y-6" id="panel-instansi">
 <!-- Mini Metrics Summary Bento Strip -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 shadow-sm flex items-center justify-between">
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between hover:border-primary/50 transition-all">
+<div class="flex items-start justify-between">
 <div>
-<p class="text-caption font-caption text-on-surface-variant uppercase tracking-wider font-semibold">Total OPD Terdaftar</p>
-<h3 class="text-headline-md font-headline-md text-primary mt-1">48 <span class="text-title-md font-normal text-on-surface-variant">Instansi</span></h3>
-<p class="text-caption text-emerald-700 mt-1 flex items-center gap-1 font-medium">
-<span class="material-symbols-outlined text-sm">check_circle</span> 100% Terverifikasi Diskominfo
-                </p>
+<span class="text-label-md font-label-md text-on-surface-variant font-medium block">Total OPD Terdaftar</span>
+<h4 class="text-display-hero-mobile font-display-hero-mobile font-bold text-primary mt-1">48</h4>
 </div>
-<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-2xl">domain</span>
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">domain</span>
 </div>
 </div>
-<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 mt-4 pt-3 border-t border-outline-variant/20 text-xs text-emerald-700 font-medium">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span>100% Terverifikasi Diskominfo</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between hover:border-primary/50 transition-all">
+<div class="flex items-start justify-between">
 <div>
-<p class="text-caption font-caption text-on-surface-variant uppercase tracking-wider font-semibold">Terhubung Satu Data Riau</p>
-<h3 class="text-headline-md font-headline-md text-secondary mt-1">42 <span class="text-title-md font-normal text-on-surface-variant">OPD</span></h3>
-<p class="text-caption text-secondary mt-1 flex items-center gap-1 font-medium">
-<span class="material-symbols-outlined text-sm">hub</span> Portal SDI Terintegrasi
-                </p>
+<span class="text-label-md font-label-md text-on-surface-variant font-medium block">Terhubung Satu Data Riau</span>
+<h4 class="text-display-hero-mobile font-display-hero-mobile font-bold text-secondary mt-1">42</h4>
 </div>
-<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-2xl">dataset</span>
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[24px]">dataset</span>
 </div>
 </div>
-<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 mt-4 pt-3 border-t border-outline-variant/20 text-xs text-secondary font-medium">
+<span class="material-symbols-outlined text-sm">hub</span>
+<span>Portal SDI Terintegrasi</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between hover:border-primary/50 transition-all">
+<div class="flex items-start justify-between">
 <div>
-<p class="text-caption font-caption text-on-surface-variant uppercase tracking-wider font-semibold">Integrasi SSO Aktif</p>
-<h3 class="text-headline-md font-headline-md text-primary mt-1">39 <span class="text-title-md font-normal text-on-surface-variant">Sistem Utama</span></h3>
-<p class="text-caption text-on-surface-variant mt-1 flex items-center gap-1 font-medium">
-<span class="material-symbols-outlined text-sm">key</span> Autentikasi Tunggal ASN
-                </p>
+<span class="text-label-md font-label-md text-on-surface-variant font-medium block">Integrasi SSO Aktif</span>
+<h4 class="text-display-hero-mobile font-display-hero-mobile font-bold text-primary mt-1">39</h4>
 </div>
-<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-2xl">lock_person</span>
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">lock_person</span>
 </div>
 </div>
+<div class="flex items-center gap-1.5 mt-4 pt-3 border-t border-outline-variant/20 text-xs text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-sm">key</span>
+<span>Autentikasi Tunggal ASN</span>
 </div>
+</div>
+</div>
+
 <!-- Main Table Card Wrapper -->
 <div class="bg-surface-container-lowest shadow-sm rounded-xl p-6 border border-outline-variant/30 space-y-5">
 <!-- Table Action Toolbar -->
@@ -778,5 +788,22 @@
       }
     }
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        let tab = urlParams.get('tab');
+        
+        // Default ke instansi jika tidak ada tab
+        if (!tab) tab = 'instansi';
+        
+        // Map tab names if needed (sidebar 'tim' -> page 'pengguna')
+        if (tab === 'tim') tab = 'pengguna';
+        
+        if (typeof switchTab === 'function') {
+            switchTab(tab);
+        }
+    });
+</script>
+
 </body>
 </html>

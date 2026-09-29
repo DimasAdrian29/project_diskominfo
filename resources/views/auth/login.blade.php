@@ -66,54 +66,46 @@
         </p>
 </div>
 <!-- Main Login Form -->
-<form action="/admin" class="space-y-5" method="GET">
-<!-- Username / NIP Input -->
-<div>
-<label class="block text-sm font-semibold text-slate-700 mb-2" for="username">
-            NIP atau Username
+<form id="loginForm" class="space-y-5" onsubmit="event.preventDefault(); window.location.href = document.getElementById('role_select').value;">
+        <!-- Username / NIP Input (Simulated as Role Selector) -->
+        <div>
+          <label for="role_select" class="block text-sm font-semibold text-slate-700 mb-2">
+            Pilih Peran (Simulasi)
           </label>
-<div class="relative">
-<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-<span class="material-symbols-outlined text-[20px]">person</span>
-</div>
-<input class="block w-full pl-10 pr-3.5 py-2.5 bg-slate-50/50 hover:bg-white text-slate-900 border border-slate-200 rounded-lg text-sm placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0D47A1]/20 focus:border-[#0D47A1] transition-all duration-150" id="username" name="username" placeholder="Masukkan NIP atau Username" required="" type="text"/>
-</div>
-</div>
-<!-- Password Input -->
-<div>
-<div class="flex items-center justify-between mb-2">
-<label class="block text-sm font-semibold text-slate-700" for="password">
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+              <span class="material-symbols-outlined text-[20px]">badge</span>
+            </div>
+            <select id="role_select" name="role_select" class="block w-full pl-10 pr-3.5 py-2.5 bg-slate-50/50 hover:bg-white text-slate-900 border border-slate-200 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0D47A1]/20 focus:border-[#0D47A1] transition-all duration-150 cursor-pointer">
+              <option value="/admin/aptika">Admin APTIKA (Manajemen Aplikasi)</option>
+              <option value="/admin/tik">Admin TIK (Infrastruktur & Keamanan)</option>
+              <option value="/admin/persandian">Admin Persandian (Pengujian Sistem)</option>
+              <option value="/admin/kadin">Kepala Dinas (Monitoring)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Password Input -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label for="password" class="block text-sm font-semibold text-slate-700">
               Kata Sandi
             </label>
-<a class="text-xs font-semibold text-[#0D47A1] hover:text-blue-800 transition" href="#lupa-password">
-              Lupa Password?
-            </a>
-</div>
-<div class="relative">
-<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-<span class="material-symbols-outlined text-[20px]">lock</span>
-</div>
-<input class="block w-full pl-10 pr-10 py-2.5 bg-slate-50/50 hover:bg-white text-slate-900 border border-slate-200 rounded-lg text-sm placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0D47A1]/20 focus:border-[#0D47A1] transition-all duration-150" id="password" name="password" placeholder="Masukkan Kata Sandi" required="" type="password"/>
-<button aria-label="Tampilkan sandi" class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 transition" id="togglePassword" type="button">
-<span class="material-symbols-outlined text-[20px]" id="eyeIcon">visibility</span>
-</button>
-</div>
-</div>
-<!-- Remember Me Checkbox -->
-<div class="flex items-center">
-<label class="flex items-center gap-2.5 cursor-pointer select-none">
-<input class="w-4 h-4 rounded border-slate-300 text-[#0D47A1] focus:ring-[#0D47A1] focus:ring-offset-0 transition cursor-pointer" type="checkbox"/>
-<span class="text-sm text-slate-600">Ingat Saya</span>
-</label>
-</div>
-<!-- Submit Button -->
-<div class="pt-1">
-<button class="w-full bg-[#0D47A1] hover:bg-[#0a3882] text-white text-sm font-semibold py-2.5 px-4 rounded-lg shadow-sm hover:shadow transition-all duration-150 flex items-center justify-center gap-2 active:scale-[0.99]" type="submit">
-<span>Masuk</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</button>
-</div>
-</form>
+          </div>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+              <span class="material-symbols-outlined text-[20px]">lock</span>
+            </div>
+            <input type="password" name="password" id="password" class="block w-full pl-10 pr-3.5 py-2.5 bg-slate-50/50 hover:bg-white text-slate-900 border border-slate-200 rounded-lg text-sm placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0D47A1]/20 focus:border-[#0D47A1] transition-all duration-150" placeholder="••••••••" value="password" required>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full bg-[#0D47A1] hover:bg-[#165eae] text-white font-semibold py-2.5 px-4 rounded-lg shadow-sm shadow-[#0D47A1]/20 transition-all duration-200 flex items-center justify-center gap-2">
+          <span>Masuk Aplikasi</span>
+          <span class="material-symbols-outlined text-[18px]">login</span>
+        </button>
+      </form>
 <!-- Back to Public Portal Link -->
 <div class="mt-7 pt-6 border-t border-slate-100 text-center">
 <a class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-[#0D47A1] transition" href="/">

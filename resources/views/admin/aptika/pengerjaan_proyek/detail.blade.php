@@ -145,7 +145,7 @@
 </head>
 <body class="bg-background font-body-md text-on-surface antialiased flex min-h-screen">
 <!-- ==================== SIDEBAR COMPONENT ==================== -->
-@include('admin.partials.sidebar')
+@include('admin.aptika.partials.sidebar')
 
 <!-- ==================== MAIN CONTENT WRAPPER ==================== -->
 <div class="flex-1 flex flex-col ml-64 min-w-0 bg-background overflow-y-auto h-screen relative">

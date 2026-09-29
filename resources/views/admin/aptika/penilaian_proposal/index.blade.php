@@ -140,7 +140,7 @@
 <body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex selection:bg-primary-fixed selection:text-primary">
 
 <!-- ==================== SIDEBAR COMPONENT ==================== -->
-@include('admin.partials.sidebar')
+@include('admin.aptika.partials.sidebar')
 
 <!-- ==================== MAIN CONTENT WRAPPER ==================== -->
 <div class="flex-1 flex flex-col ml-64 min-w-0 bg-background">
@@ -175,44 +175,64 @@
 
     <!-- Metric KPI Cards (Bento Mini) -->
     <section aria-label="Ringkasan Penilaian" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="bg-surface-container-lowest border border-outline-variant/30 p-4 rounded-xl shadow-xs flex items-center justify-between">
-            <div>
-                <div class="text-caption font-caption text-on-surface-variant">Total Usulan Masuk</div>
-                <div class="text-xl font-bold text-on-surface mt-1">14 Usulan</div>
-                <div class="text-[11px] text-emerald-600 font-semibold mt-0.5">Semua OPD Pemprov</div>
+        <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between hover:border-primary/50 transition-all">
+            <div class="flex items-start justify-between">
+                <div>
+                    <span class="text-label-md font-label-md text-on-surface-variant font-medium block">Total Usulan Masuk</span>
+                    <h4 class="text-display-hero-mobile font-display-hero-mobile font-bold text-on-surface mt-1">14</h4>
+                </div>
+                <div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[24px]">folder_open</span>
+                </div>
             </div>
-            <div class="w-11 h-11 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
-                <span class="material-symbols-outlined text-[24px]">folder_open</span>
-            </div>
-        </div>
-        <div class="bg-surface-container-lowest border border-outline-variant/30 p-4 rounded-xl shadow-xs flex items-center justify-between border-l-4 border-l-amber-500">
-            <div>
-                <div class="text-caption font-caption text-on-surface-variant">Menunggu Review Tim</div>
-                <div class="text-xl font-bold text-amber-700 mt-1">8 Berkas</div>
-                <div class="text-[11px] text-amber-600 font-semibold mt-0.5">Memerlukan Keputusan</div>
-            </div>
-            <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600">
-                <span class="material-symbols-outlined text-[24px]">pending_actions</span>
+            <div class="flex items-center gap-1.5 mt-4 pt-3 border-t border-outline-variant/20 text-caption font-caption text-emerald-600 font-semibold">
+                <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                <span>Semua OPD Pemprov</span>
             </div>
         </div>
-        <div class="bg-surface-container-lowest border border-outline-variant/30 p-4 rounded-xl shadow-xs flex items-center justify-between border-l-4 border-l-emerald-600">
-            <div>
-                <div class="text-caption font-caption text-on-surface-variant">Disetujui Arsitektur</div>
-                <div class="text-xl font-bold text-emerald-800 mt-1">2 Proposal</div>
-                <div class="text-[11px] text-emerald-600 font-semibold mt-0.5">Lanjut ke Penganggaran</div>
+        <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between hover:border-primary/50 transition-all">
+            <div class="flex items-start justify-between">
+                <div>
+                    <span class="text-label-md font-label-md text-on-surface-variant font-medium block">Menunggu Review Tim</span>
+                    <h4 class="text-display-hero-mobile font-display-hero-mobile font-bold text-amber-700 mt-1">8</h4>
+                </div>
+                <div class="w-11 h-11 rounded-lg bg-amber-50 flex items-center justify-center text-amber-600 shrink-0">
+                    <span class="material-symbols-outlined text-[24px]">pending_actions</span>
+                </div>
             </div>
-            <div class="w-11 h-11 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-700">
-                <span class="material-symbols-outlined text-[24px]">task_alt</span>
+            <div class="flex items-center gap-1.5 mt-4 pt-3 border-t border-outline-variant/20 text-caption font-caption text-amber-600 font-semibold">
+                <span class="material-symbols-outlined text-[16px]">schedule</span>
+                <span>Memerlukan Keputusan</span>
             </div>
         </div>
-        <div class="bg-surface-container-lowest border border-outline-variant/30 p-4 rounded-xl shadow-xs flex items-center justify-between border-l-4 border-l-blue-600">
-            <div>
-                <div class="text-caption font-caption text-on-surface-variant">Perlu Revisi Teknis</div>
-                <div class="text-xl font-bold text-blue-800 mt-1">3 Proposal</div>
-                <div class="text-[11px] text-blue-600 font-semibold mt-0.5">Catatan Terkirim ke OPD</div>
+        <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between hover:border-primary/50 transition-all">
+            <div class="flex items-start justify-between">
+                <div>
+                    <span class="text-label-md font-label-md text-on-surface-variant font-medium block">Disetujui Arsitektur</span>
+                    <h4 class="text-display-hero-mobile font-display-hero-mobile font-bold text-emerald-800 mt-1">2</h4>
+                </div>
+                <div class="w-11 h-11 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-700 shrink-0">
+                    <span class="material-symbols-outlined text-[24px]">task_alt</span>
+                </div>
             </div>
-            <div class="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center text-blue-700">
-                <span class="material-symbols-outlined text-[24px]">published_with_changes</span>
+            <div class="flex items-center gap-1.5 mt-4 pt-3 border-t border-outline-variant/20 text-caption font-caption text-emerald-600 font-semibold">
+                <span class="material-symbols-outlined text-[16px]">trending_up</span>
+                <span>Lanjut ke Penganggaran</span>
+            </div>
+        </div>
+        <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between hover:border-primary/50 transition-all">
+            <div class="flex items-start justify-between">
+                <div>
+                    <span class="text-label-md font-label-md text-on-surface-variant font-medium block">Perlu Revisi Teknis</span>
+                    <h4 class="text-display-hero-mobile font-display-hero-mobile font-bold text-blue-800 mt-1">3</h4>
+                </div>
+                <div class="w-11 h-11 rounded-lg bg-blue-50 flex items-center justify-center text-blue-700 shrink-0">
+                    <span class="material-symbols-outlined text-[24px]">published_with_changes</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-1.5 mt-4 pt-3 border-t border-outline-variant/20 text-caption font-caption text-blue-600 font-semibold">
+                <span class="material-symbols-outlined text-[16px]">info</span>
+                <span>Catatan Terkirim ke OPD</span>
             </div>
         </div>
     </section>
@@ -306,10 +326,16 @@
                             </div>
                         </td>
                         <td class="py-3.5 px-4 whitespace-nowrap">
-                            <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-primary hover:bg-primary hover:text-white transition-colors text-caption font-semibold" href="#">
-                                <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
-                                <span>Proposal.pdf</span>
-                            </a>
+                            <div class="flex flex-col items-start gap-1.5">
+                                <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-primary hover:bg-primary hover:text-white transition-colors text-caption font-semibold" href="#" title="Buka Dokumen Proposal">
+                                    <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+                                    <span>Proposal</span>
+                                </a>
+                                <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-secondary hover:bg-secondary hover:text-white transition-colors text-caption font-semibold" href="#" title="Buka Dokumen Perancangan (HLD/LLD)">
+                                    <span class="material-symbols-outlined text-[16px]">architecture</span>
+                                    <span>Perancangan</span>
+                                </a>
+                            </div>
                         </td>
                         <td class="py-3.5 px-4 whitespace-nowrap">
                             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-caption font-semibold bg-amber-50 text-amber-800 border border-amber-200">
@@ -355,10 +381,16 @@
                             </div>
                         </td>
                         <td class="py-3.5 px-4 whitespace-nowrap">
-                            <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-primary hover:bg-primary hover:text-white transition-colors text-caption font-semibold" href="#">
-                                <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
-                                <span>Proposal.pdf</span>
-                            </a>
+                            <div class="flex flex-col items-start gap-1.5">
+                                <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-primary hover:bg-primary hover:text-white transition-colors text-caption font-semibold" href="#" title="Buka Dokumen Proposal">
+                                    <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+                                    <span>Proposal</span>
+                                </a>
+                                <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-secondary hover:bg-secondary hover:text-white transition-colors text-caption font-semibold" href="#" title="Buka Dokumen Perancangan (HLD/LLD)">
+                                    <span class="material-symbols-outlined text-[16px]">architecture</span>
+                                    <span>Perancangan</span>
+                                </a>
+                            </div>
                         </td>
                         <td class="py-3.5 px-4 whitespace-nowrap">
                             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-caption font-semibold bg-blue-50 text-blue-800 border border-blue-200">
@@ -404,10 +436,16 @@
                             </div>
                         </td>
                         <td class="py-3.5 px-4 whitespace-nowrap">
-                            <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-primary hover:bg-primary hover:text-white transition-colors text-caption font-semibold" href="#">
-                                <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
-                                <span>Proposal.pdf</span>
-                            </a>
+                            <div class="flex flex-col items-start gap-1.5">
+                                <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-primary hover:bg-primary hover:text-white transition-colors text-caption font-semibold" href="#" title="Buka Dokumen Proposal">
+                                    <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+                                    <span>Proposal</span>
+                                </a>
+                                <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-secondary hover:bg-secondary hover:text-white transition-colors text-caption font-semibold" href="#" title="Buka Dokumen Perancangan (HLD/LLD)">
+                                    <span class="material-symbols-outlined text-[16px]">architecture</span>
+                                    <span>Perancangan</span>
+                                </a>
+                            </div>
                         </td>
                         <td class="py-3.5 px-4 whitespace-nowrap">
                             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-caption font-semibold bg-amber-50 text-amber-800 border border-amber-200">
@@ -453,10 +491,16 @@
                             </div>
                         </td>
                         <td class="py-3.5 px-4 whitespace-nowrap">
-                            <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-primary hover:bg-primary hover:text-white transition-colors text-caption font-semibold" href="#">
-                                <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
-                                <span>Proposal.pdf</span>
-                            </a>
+                            <div class="flex flex-col items-start gap-1.5">
+                                <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-primary hover:bg-primary hover:text-white transition-colors text-caption font-semibold" href="#" title="Buka Dokumen Proposal">
+                                    <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+                                    <span>Proposal</span>
+                                </a>
+                                <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-secondary hover:bg-secondary hover:text-white transition-colors text-caption font-semibold" href="#" title="Buka Dokumen Perancangan (HLD/LLD)">
+                                    <span class="material-symbols-outlined text-[16px]">architecture</span>
+                                    <span>Perancangan</span>
+                                </a>
+                            </div>
                         </td>
                         <td class="py-3.5 px-4 whitespace-nowrap">
                             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-caption font-semibold bg-slate-100 text-slate-800 border border-slate-200">
@@ -502,10 +546,16 @@
                             </div>
                         </td>
                         <td class="py-3.5 px-4 whitespace-nowrap">
-                            <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-primary hover:bg-primary hover:text-white transition-colors text-caption font-semibold" href="#">
-                                <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
-                                <span>Proposal.pdf</span>
-                            </a>
+                            <div class="flex flex-col items-start gap-1.5">
+                                <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-primary hover:bg-primary hover:text-white transition-colors text-caption font-semibold" href="#" title="Buka Dokumen Proposal">
+                                    <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+                                    <span>Proposal</span>
+                                </a>
+                                <a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/40 text-secondary hover:bg-secondary hover:text-white transition-colors text-caption font-semibold" href="#" title="Buka Dokumen Perancangan (HLD/LLD)">
+                                    <span class="material-symbols-outlined text-[16px]">architecture</span>
+                                    <span>Perancangan</span>
+                                </a>
+                            </div>
                         </td>
                         <td class="py-3.5 px-4 whitespace-nowrap">
                             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-caption font-semibold bg-amber-50 text-amber-800 border border-amber-200">

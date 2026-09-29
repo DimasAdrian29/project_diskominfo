@@ -138,7 +138,7 @@
 </head>
 <body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex">
 <!-- ==================== SIDEBAR COMPONENT ==================== -->
-@include('admin.partials.sidebar')
+@include('admin.aptika.partials.sidebar')
 
 <!-- ==================== MAIN CONTENT WRAPPER ==================== -->
 <div class="flex-1 flex flex-col ml-64 min-w-0 bg-background">
@@ -172,73 +172,74 @@
 <!-- 2. Metric Cards / KPI Summary (4 cards) -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 <!-- Card 1 -->
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant shadow-sm hover:border-primary transition-all flex flex-col justify-between">
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm hover:border-primary/50 transition-all flex flex-col justify-between">
 <div class="flex items-start justify-between">
 <div>
-<span class="text-caption font-caption text-on-surface-variant block">Total Proyek Berjalan</span>
-<span class="text-headline-sm font-headline-sm text-on-surface mt-1 block">18 Aplikasi</span>
+<span class="text-label-md font-label-md text-on-surface-variant font-medium block">Total Proyek Berjalan</span>
+<h4 class="text-display-hero-mobile font-display-hero-mobile font-bold text-on-surface mt-1">18</h4>
 </div>
-<div class="w-10 h-10 rounded-xl bg-surface-container text-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-[22px]">code</span>
+<div class="w-11 h-11 rounded-lg bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">code</span>
 </div>
 </div>
-<div class="mt-4 flex items-center gap-1.5 text-label-md font-label-md text-emerald-700">
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center gap-1.5 text-label-md font-label-md text-emerald-700">
 <span class="material-symbols-outlined text-[16px]">trending_up</span>
-<span class="">+3 bulan ini</span>
+<span>+3 bulan ini</span>
 <span class="text-on-surface-variant font-normal text-caption ml-1">dari usulan OPD</span>
 </div>
 </div>
 <!-- Card 2 -->
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant shadow-sm hover:border-primary transition-all flex flex-col justify-between">
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm hover:border-primary/50 transition-all flex flex-col justify-between">
 <div class="flex items-start justify-between">
 <div>
-<span class="text-caption font-caption text-on-surface-variant block">Fase Pengembangan &amp; Integrasi</span>
-<span class="text-headline-sm font-headline-sm text-on-surface mt-1 block">11 Aplikasi</span>
+<span class="text-label-md font-label-md text-on-surface-variant font-medium block">Fase Pengembangan &amp; Integrasi</span>
+<h4 class="text-display-hero-mobile font-display-hero-mobile font-bold text-on-surface mt-1">11</h4>
 </div>
-<div class="w-10 h-10 rounded-xl bg-surface-container text-secondary flex items-center justify-center">
-<span class="material-symbols-outlined text-[22px]">engineering</span>
+<div class="w-11 h-11 rounded-lg bg-surface-container text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">engineering</span>
 </div>
 </div>
-<div class="mt-4 flex items-center gap-2">
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center gap-2">
 <div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
 <div class="bg-primary h-full rounded-full" style="width: 64%"></div>
 </div>
-<span class="text-caption font-caption font-bold text-primary whitespace-nowrap">Rata-rata 64%</span>
+<span class="text-caption font-caption font-bold text-primary whitespace-nowrap">64%</span>
 </div>
 </div>
 <!-- Card 3 -->
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant shadow-sm hover:border-amber-500 transition-all flex flex-col justify-between">
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm hover:border-primary/50 transition-all flex flex-col justify-between">
 <div class="flex items-start justify-between">
 <div>
-<span class="text-caption font-caption text-on-surface-variant block">Menunggu Kelengkapan Dokumen</span>
-<span class="text-headline-sm font-headline-sm text-amber-700 mt-1 block">4 Aplikasi</span>
+<span class="text-label-md font-label-md text-on-surface-variant font-medium block">Menunggu Kelengkapan Dokumen</span>
+<h4 class="text-display-hero-mobile font-display-hero-mobile font-bold text-amber-700 mt-1">4</h4>
 </div>
-<div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center">
-<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+<div class="w-11 h-11 rounded-lg bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">pending_actions</span>
 </div>
 </div>
-<div class="mt-4 flex items-center gap-1.5 text-label-md font-label-md text-amber-800">
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center gap-1.5 text-caption font-caption text-amber-800">
 <span class="material-symbols-outlined text-[16px]">info</span>
-<span class="">Perlu upload source code / SRS</span>
+<span>Perlu upload source code / SRS</span>
 </div>
 </div>
 <!-- Card 4 -->
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant shadow-sm hover:border-emerald-500 transition-all flex flex-col justify-between">
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm hover:border-primary/50 transition-all flex flex-col justify-between">
 <div class="flex items-start justify-between">
 <div>
-<span class="text-caption font-caption text-on-surface-variant block">Siap Uji Kelayakan</span>
-<span class="text-headline-sm font-headline-sm text-emerald-800 mt-1 block">3 Aplikasi</span>
+<span class="text-label-md font-label-md text-on-surface-variant font-medium block">Siap Uji Kelayakan</span>
+<h4 class="text-display-hero-mobile font-display-hero-mobile font-bold text-emerald-800 mt-1">3</h4>
 </div>
-<div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center">
-<span class="material-symbols-outlined text-[22px]">verified_user</span>
+<div class="w-11 h-11 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
 </div>
 </div>
-<div class="mt-4 flex items-center gap-1.5 text-label-md font-label-md text-emerald-700">
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center gap-1.5 text-label-md font-label-md text-emerald-700">
 <span class="material-symbols-outlined text-[16px]">check_circle</span>
-<span class="">Progres 90%+ (VAPT &amp; UAT)</span>
+<span>Progres 90%+ (VAPT &amp; UAT)</span>
 </div>
 </div>
 </div>
+
 <!-- 3. Filter & Search Toolbar -->
 <div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
 <div class="flex flex-wrap items-center gap-3 w-full md:w-auto"><div class="relative flex items-center min-w-[260px] md:w-80"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px] pointer-events-none">search</span><input type="text" placeholder="Cari nama proyek, kode PRJ, modul, atau nama PIC..." class="w-full pl-9 pr-8 py-1.5 text-body-sm font-body-sm bg-surface-container-lowest border border-outline-variant rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-xs placeholder:text-outline"><button type="button" class="absolute right-2.5 text-outline hover:text-on-surface p-0.5 rounded transition-colors" title="Hapus pencarian"><span class="material-symbols-outlined text-[16px]">close</span></button></div><div class="hidden md:block h-5 w-px bg-outline-variant"></div>
