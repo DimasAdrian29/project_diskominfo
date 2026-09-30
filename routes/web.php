@@ -53,4 +53,5 @@ Route::prefix('admin/persandian')->name('admin.persandian.')->group(function () 
 // ROLE 4: KEPALA DINAS (KADIN)
 Route::prefix('admin/kadin')->name('admin.kadin.')->group(function () {
     Route::get('/', function () { return view('admin.kadin.dashboard.index'); })->name('dashboard');
+    Route::get('/monitoring', function () { return view('admin.kadin.monitoring.index'); })->name('monitoring');
 });

@@ -18,6 +18,11 @@
             <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg {{ request()->is('admin/kadin') ? 'bg-surface-container text-primary font-semibold shadow-xs' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low' }} transition-colors" href="{{ route('admin.kadin.dashboard') }}">
                 <span class="material-symbols-outlined text-[20px] {{ request()->is('admin/kadin') ? 'text-primary' : 'text-outline' }}" data-icon="monitoring" style="{{ request()->is('admin/kadin') ? 'font-variation-settings: \'FILL\' 1;' : '' }}">monitoring</span>
                 <span class="text-label-lg font-label-lg">Dashboard Monitoring</span>
+            </a>
+
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg {{ request()->is('admin/kadin/monitoring') ? 'bg-surface-container text-primary font-semibold shadow-xs' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low' }} transition-colors" href="{{ route('admin.kadin.monitoring') }}">
+                <span class="material-symbols-outlined text-[20px] {{ request()->is('admin/kadin/monitoring') ? 'text-primary' : 'text-outline' }}" data-icon="fact_check" style="{{ request()->is('admin/kadin/monitoring') ? 'font-variation-settings: \'FILL\' 1;' : '' }}">fact_check</span>
+                <span class="text-label-lg font-label-lg">Monitoring Pendaftaran</span>
             </a></nav>
     </div>
 
